@@ -13,7 +13,6 @@ foreach ($results as $key => $value) {
         $results[$key] = $_POST['data'][$key];
     }
 }
-    
 
 ?>
 <!DOCTYPE html>
@@ -44,22 +43,23 @@ foreach ($results as $key => $value) {
           <tbody>
             <tr>
               <td>Name</td>
-              <td><?php echo htmlspecialchars($results['name']); ?></td>
+              <td><span id="resultName"><?php echo htmlspecialchars($results['name']); ?></span></td>
             </tr>
             
             <tr>
               <td>Email</td>
-              <td><?php echo htmlspecialchars($results['email']); ?></td>
+              <td><span id="resultEmail"><?php echo htmlspecialchars($results['email']); ?></span></td>
             </tr>
 
             <tr>
               <td>Fruits</td>
-              <td><?php echo htmlspecialchars($results['fruits']); ?></td>
+              <td><span id="resultFruits"><?php echo htmlspecialchars($results['fruits']); ?></span></td>
             </tr>
 
             <tr>
               <td>City</td>
               <td>
+                <span id="resultCity">
                 <?php
                    if (isset($results['city']) && is_array($results['city'])) {
                        foreach ($results['city'] as $city) {
@@ -68,12 +68,13 @@ foreach ($results as $key => $value) {
                        echo implode(', ', $cities);
                    }
                 ?>
+                </span>
               </td>
             </tr>
 
             <tr>
               <td>Number</td>
-              <td><?php echo htmlspecialchars($results['number']); ?></td>
+              <td><span id="resultNumber"><?php echo htmlspecialchars($results['number']); ?></span></td>
             </tr>
           </tbody>
           
