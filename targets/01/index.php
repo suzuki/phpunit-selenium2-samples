@@ -3,7 +3,6 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
     <title>Sample 01</title>
   </head>
 
@@ -47,7 +46,7 @@
           <label class="control-label">Do you want to go ?</label>
           <div class="controls">
             <label class="checkbox">
-              <input type="checkbox" name="data[city][]" value="sapporo" id="inputCityTokyo" class="input-large">Sapporo
+              <input type="checkbox" name="data[city][]" value="sapporo" id="inputCitySapporo" class="input-large">Sapporo
             </label>
             <label class="checkbox">
               <input type="checkbox" name="data[city][]" value="tokyo" id="inputCityTokyo" class="input-large">Tokyo
@@ -74,7 +73,7 @@
         <!-- Button -->
         <div class="control-group">
           <div class="controls">
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary" id="btnSubmit">Register</button>
           </div>
         </div>
 
