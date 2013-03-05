@@ -15,14 +15,12 @@ foreach ($results as $key => $value) {
 }
     
 
-var_dump($results);
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
     <title>Sample 01 Result</title>
   </head>
 
@@ -32,42 +30,63 @@ var_dump($results);
 
       <h1>Sample 01 Result</h1>
 
-      <table class="table-striped">
-        <tr>
-          <td>Name</td>
-          <td><?php echo htmlspecialchars($results['name']); ?></td>
-        </tr>
+      <div class="span8 offset1">
+        
+        <table class="table table-striped">
+          <caption><h3>Data Result</h3></caption>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Value</th>
+            </tr>
+          </thead>
 
-        <tr>
-          <td>Email</td>
-          <td><?php echo htmlspecialchars($results['email']); ?></td>
-        </tr>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><?php echo htmlspecialchars($results['name']); ?></td>
+            </tr>
+            
+            <tr>
+              <td>Email</td>
+              <td><?php echo htmlspecialchars($results['email']); ?></td>
+            </tr>
 
-        <tr>
-          <td>Fruits</td>
-          <td><?php echo htmlspecialchars($results['fruits']); ?></td>
-        </tr>
+            <tr>
+              <td>Fruits</td>
+              <td><?php echo htmlspecialchars($results['fruits']); ?></td>
+            </tr>
 
-        <tr>
-          <td>City</td>
-          <td>
-            <?php
-               if (isset($results['city']) && is_array($results['city'])) {
-                   foreach ($results['city'] as $city) {
-                       $cities[] = htmlspecialchars($city);
+            <tr>
+              <td>City</td>
+              <td>
+                <?php
+                   if (isset($results['city']) && is_array($results['city'])) {
+                       foreach ($results['city'] as $city) {
+                           $cities[] = htmlspecialchars($city);
+                       }
+                       echo implode(', ', $cities);
                    }
-                   echo implode(', ', $cities);
-               }
-            ?>
-          </td>
-        </tr>
+                ?>
+              </td>
+            </tr>
 
-        
+            <tr>
+              <td>Number</td>
+              <td><?php echo htmlspecialchars($results['number']); ?></td>
+            </tr>
+          </tbody>
+          
+        </table>
 
-        
-      </table>
+      </div>
+
+
+      <div class="span8 offset1">
+        <a href="index.php">Return form view</a>
+      </div>
 
     </div>
-  
+
   </body>
 </html>
