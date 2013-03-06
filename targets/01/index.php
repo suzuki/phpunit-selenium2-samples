@@ -46,13 +46,13 @@
           <label class="control-label">Do you want to go ?</label>
           <div class="controls">
             <label class="checkbox">
-              <input type="checkbox" name="data[city][]" value="sapporo" id="inputCitySapporo" class="input-large">Sapporo
+              <input type="checkbox" name="data[city][]" value="sapporo" id="inputCitySapporo">Sapporo
             </label>
             <label class="checkbox">
-              <input type="checkbox" name="data[city][]" value="tokyo" id="inputCityTokyo" class="input-large">Tokyo
+              <input type="checkbox" name="data[city][]" value="tokyo" id="inputCityTokyo">Tokyo
             </label>
             <label class="checkbox">
-              <input type="checkbox" name="data[city][]" value="tokyo" id="inputCityOsaka" class="input-large">Osaka
+              <input type="checkbox" name="data[city][]" value="tokyo" id="inputCityOsaka">Osaka
             </label>
           </div>
         </div>
